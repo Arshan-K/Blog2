@@ -15,6 +15,7 @@ const submitBlog = () => {
         throw new Error("Network response was not ok");
       }
       console.log("Blog post saved successfully!");
+      alert("Blog post saved");
     })
     .catch((error) => {
       console.error("Error:", error);

@@ -1,16 +1,32 @@
 const express = require("express");
 const app = express();
-const PORT = 8080;
+const PORT = 3306;   //8080
 const mysql = require("mysql2");
 const cors = require("cors"); 
 
 
 
+// const connection = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "Arshan@123",
+//   database: "blog",
+// });
+
+// const connection = mysql.createConnection({
+//   host: "db4free.net",
+//   user: "testingblog",
+//   password: "arshan@123",
+//   database: "system456",
+//   multipleStatements: true                      //online database
+// });   
+
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Arshan@123",
-  database: "blog",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
+  multipleStatements: true
 });
 
 connection.connect((err) => {
