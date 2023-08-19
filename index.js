@@ -13,21 +13,21 @@ const cors = require("cors");
 //   database: "blog",
 // });
 
-// const connection = mysql.createConnection({
-//   host: "db4free.net",
-//   user: "testingblog",
-//   password: "arshan@123",
-//   database: "system456",
-//   multipleStatements: true                      //online database
-// });   
-
 const connection = mysql.createConnection({
-  host: DB_HOST,
-  user: DB_USER,                                  //process.env.
-  password: DB_PASSWORD,
-  database: DB_DATABASE,
-  multipleStatements: true
-});
+  host: "db4free.net",
+  user: "testingblog",
+  password: "arshan@123",
+  database: "system456",
+  multipleStatements: true                      //online database
+});   
+
+// const connection = mysql.createConnection({
+//   host: DB_HOST,
+//   user: DB_USER,                                  //process.env.
+//   password: DB_PASSWORD,
+//   database: DB_DATABASE,
+//   multipleStatements: true
+// });
 
 connection.connect((err) => {
   if (err) {
