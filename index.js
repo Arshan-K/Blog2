@@ -22,10 +22,10 @@ const connection = mysql.createConnection({
 });   
 
 // const connection = mysql.createConnection({
-//   host: DB_HOST,
-//   user: DB_USER,                                  //process.env.
-//   password: DB_PASSWORD,
-//   database: DB_DATABASE,
+//   host: process.env.DB_HOST,
+//   user: process.env.DB_USER,                                  //process.env.
+//   password: process.env.DB_PASSWORD,
+//   database: process.env.DB_DATABASE,
 //   multipleStatements: true
 // });
 
